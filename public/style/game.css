@@ -1,0 +1,45 @@
+@font-face {
+font-family: mainFont;
+src: url('./font/arista.ttf');
+}
+
+#fieldWrapper {
+	display: block;
+	margin: 0 auto;
+	z-index: -999;
+	text-align: center;
+}
+
+.field {
+	position: absolute;
+	left:0px;
+}
+
+#title {
+	position:absolute;
+	top:20px;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.text {
+	font-family: mainFont;
+	font-size: 4em;
+}
+
+body {
+	overflow: visible;
+	font-family: Helvetica, sans-serif;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	top:0px;
+}
+
+#userBar {
+	position: absolute;
+	bottom: 20px;
+}

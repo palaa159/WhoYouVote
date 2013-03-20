@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+	<title>WHO YOU VOTE?</title>		
+	<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="style/reset.css">
+		<link rel="stylesheet" href="style/game.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="js/paper.js"></script>
+		<script>
+			function greet() {
+				alert("WHO YOU VOTE? works best with maximized Google Chrome, Safari, or Firefox");
+				alert("Use arrow keys to vote or play around");
+			}
+		</script>
+	</head>
+	
+	<body onload="greet();">
+		<div id="fieldWrapper">
+		<img class="field" src="./electionfield.jpg" width="100%" />
+		</div>
+		<canvas id="gameCanvas"></canvas>
+		<div id="title"><p class="text">WHO YOU VOTE?</p>
+		<p>use arrow keys to control (works best with maximized screen Google Chrome)</p>
+		</div>
+		
+		<div id="scoreWrapper">
+			<div id="scoreObama"></div>
+			<div id="scoreRomney"></div>
+		</div>
+		
+		<div id="userBar">
+		<p>Type to chat (not functional yet)</p>
+		<input type="text" id="chatBox" placeholder="type here" />
+		<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+		</div>
+		<script src="http://ec2-50-112-205-121.us-west-2.compute.amazonaws.com:4000/socket.io/socket.io.js"></script>
+		<script src="js/requestAnimationFrame.js"></script>
+		<script src="js/Keys.js"></script>
+		<script src="js/Player.js"></script>
+		<script src="js/game.js"></script>
+		<script>
+			// Initialise the game
+			init();
+			animate();
+		</script>
+	</body>
+</html>
